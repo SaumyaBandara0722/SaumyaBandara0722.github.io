@@ -77,6 +77,21 @@
         </div>
     </div>
 
+    function mouseTrack(e){
+        var event = event || e;
+        var element_id = event.target.id;
+        var element_name = event.target.tagName;
+        var mouse_positon_along_X_axis = event.clientX;
+        var mouse_positon_along_Y_axis = event.clientY;
+        alert("Mouse was clicked on "+ element_name +" element with an ID(s): \'"+element_id+ "\' when mouse was at "+ mouse_positon_along_X_axis+" X "+mouse_positon_along_Y_axis+" Y " )
+    }
+    if(addEventListener){
+        window.addEventListener('click',mouseTrack, false)
+    }
+    else{
+        window.attachEventListner('click',mouseTrack,false)
+     }
+     
 </body>
 
 </html>
